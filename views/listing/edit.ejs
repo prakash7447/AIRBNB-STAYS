@@ -1,0 +1,47 @@
+<% layout('/layouts/boilerplate') -%>
+
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+        <br><br>
+        <h2>update place</h2>
+        <form method="post" action="/listing/<%= listing._id %>?_method=PUT">
+            <div class="mb-3">
+                <label for="Title" class="form-label">add cathy title</label>
+                <input name="listing[title]" value="<%= listing.title %>" type="text" class="form-control">
+                
+            </div>
+           <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <textarea name="listing[description]" placeholder="enter description" class="form-control" ><%= listing.description %></textarea>
+           </div>
+         
+         <div class="mb-3">
+            <label for="Image" class="form-label">Image url</label>
+            <input name="listing[image]" value="<%= listing.image %>" type="text" class="form-control">
+        
+         </div>
+         <div class="row">
+         <div class="mb-3  col-md-4">
+            <label for="Price" class="form-label">Price</label>
+            <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control">
+         </div>
+            
+         <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input name="listing[country]" value="<%= listing.country %>" type="text" class="form-control">
+         </div>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label">location</label>
+            <input name="listing[location]" value="<%= listing.location %>" type="text" class="form-control">
+        </div>
+         
+         <br><br>
+         <button class="btn btn-dark edit-btn">edit</button>
+         <br><br>
+        </form>
+    </body>
+</div>
+</div>
+    
